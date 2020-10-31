@@ -23,3 +23,8 @@ mult(null, _, f0(null)). % for X * 0 = 0 (if 0 is defined as null)
 mult(f0(null), _, f0(null)). % (if 0 is defined as f0(null))
 mult(f1(null), X, X).
 mult(X, Y, Z) :- incr(A, X), mult(A, Y, B), add(Y, B, Z). 
+
+revers(X,Y) :- rev(X, Y, null).
+rev(f0(X), Y, Z) :- rev(X, Y, f0(Z)).
+rev(f1(X), Y, Z) :- rev(X, Y, f1(Z)).
+rev(null, Z, Z).
