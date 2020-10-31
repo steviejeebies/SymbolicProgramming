@@ -14,3 +14,7 @@ legal(f0(null)).
 legal(X):- legal(Y), incr(Y, X).
 
 incrR(X, Y):- legal(X), incr(X, Y).
+
+add(null, X, X).
+add(f0(null), X, X).
+add(X, Y, Z) :- incr(A, X), add(A, Y, B), incr(B, Z).
