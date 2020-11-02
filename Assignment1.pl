@@ -43,7 +43,7 @@ rev(null, Z, Z).
 
 normalize(f0(null), f0(null)).
 normalize(null, f0(null)).
-normalize(X, Y) :- X \= f0(null), X \= null, nmls(X, Y).
+normalize(X, Y) :- X \= f0(null), X \= null, nmlz(X, Y).
 
 nmlz(null, null).
 nmlz(f1(X), f1(Y)) :- nmlz(X, Y).
